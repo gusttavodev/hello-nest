@@ -12,4 +12,20 @@ export class CategoriesController {
                     // Função do service
       return await this.categoriesService.findAll();
     }
+
+    @Post()
+    // Body pega dados da requisição
+    async create(@Body() category) {
+        return await this.categoriesService.create(category);
+    }
+
+    @Put()
+    async update(@Body() category) {
+        return await this.categoriesService.update(category);
+    }
+
+    @Delete(':id')
+    async delete(@Param() params) {
+        return await this.categoriesService.delete(params.id);
+    }
 }
