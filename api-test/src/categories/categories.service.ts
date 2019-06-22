@@ -16,4 +16,28 @@ export class CategoriesService {
             throw new InternalServerErrorException(error.message);
         }
     }
+
+    async create(category: ICategory) {
+        try {
+            return await this.categoriesSchema.find();
+        } catch (error) {
+            throw new InternalServerErrorException(error.message);
+        }
+    }
+
+    async update() {
+        try {
+            return await this.categoriesSchema.find();
+        } catch (error) {
+            throw new InternalServerErrorException(error.message);
+        }
+    }
+
+    async delete() {
+        try {
+            return await this.categoriesSchema.find();
+        } catch (error) {
+            throw new InternalServerErrorException(error.message);
+        }
+    }
 }

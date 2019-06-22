@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Delete, Put, Body, Param} from '@nestjs/common';
 import { CategoriesService } from './categories.service';
 
 @Controller('categories')
@@ -7,8 +7,9 @@ export class CategoriesController {
         private readonly categoriesService: CategoriesService,
     ) { }
 
-    @Get()
+    @Get() // Decorator
     async index() {
+                    // Função do service
       return await this.categoriesService.findAll();
     }
 }
