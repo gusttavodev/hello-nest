@@ -1,5 +1,6 @@
 import { Controller, Get, Post, Delete, Put, Body, Param} from '@nestjs/common';
 import { CategoriesService } from './categories.service';
+import { ICategory } from './category.interface';
 
 @Controller('categories')
 export class CategoriesController { 
@@ -15,12 +16,12 @@ export class CategoriesController {
 
     @Post()
     // Body pega dados da requisição
-    async create(@Body() category) {
+    async create(@Body() category: ICategory) {
         return await this.categoriesService.create(category);
     }
 
     @Put()
-    async update(@Body() category) {
+    async update(@Body() category: ICategory) {
         return await this.categoriesService.update(category);
     }
 

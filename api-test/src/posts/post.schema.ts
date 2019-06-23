@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 
-export const post = new mongoose.Schema({
+export const PostSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -10,7 +10,7 @@ export const post = new mongoose.Schema({
         maxlength: 80,
         unique: true,
     },
-    desciption: {
+    description: {
         type: String,
         required: true,
         trim: true,
