@@ -5,5 +5,5 @@ export interface IPost extends mongoose.Document {
     id?: ObjectID,
     title: string,
     description: string,
-    category: [ObjectID]
+    category: [ObjectID],
 }

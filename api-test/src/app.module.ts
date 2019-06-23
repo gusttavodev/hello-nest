@@ -9,12 +9,12 @@ import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot("mongodb://gadsden:250433@localhost/"+
-    "test-nest?authSource=admin&w=1", { useNewUrlParser: true}),
+    MongooseModule.forRoot('mongodb://gadsden:250433@localhost/'+
+    'test-nest?authSource=admin&w=1', { useNewUrlParser: true}),
     CategoriesModule,
     PostsModule,
     UsersModule,
-    AuthModule
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
