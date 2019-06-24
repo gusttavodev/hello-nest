@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CategoriesModule } from './categories/categories.module';
 import { PostsModule } from './posts/posts.module';
-import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
@@ -13,7 +12,6 @@ import { AuthModule } from './auth/auth.module';
     'test-nest?authSource=admin&w=1', { useNewUrlParser: true}),
     CategoriesModule,
     PostsModule,
-    UsersModule,
     AuthModule,
   ],
   controllers: [AppController],
