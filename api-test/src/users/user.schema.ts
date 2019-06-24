@@ -21,9 +21,10 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String,
+        select: false,
     },
 }, { timestamps: true });
-// Roda anter de ir pro banco
+// Roda antes de ir pro banco
 UserSchema.pre('save', async function(next) {
     const user: any = this;
 
